@@ -5,13 +5,15 @@ Created on Wed Jun  8 09:20:34 2022
 @author: Cosme
 """
 
+import metodos
+
 def menu():
     print("\n\n*************MENU************\n"+
           "1. Listar Personas\n"+
           "2. Agregar Personas\n"+
           "3. Salir\n")
 
-    opcion = int(input("\n Ingrese una opcion: "))
+    opcion = int(input("\n Elija una opcion: "))
     return opcion
 
 
@@ -49,17 +51,19 @@ while bandera == True:
                     while opcion!=3:
                      opcion = menu()
                      if opcion == 1:
-                         print("a")
+                         metodos.listar_personas()
                      if opcion == 2:
-                         print("a")
+                         metodos.agregar_personas()
                      if opcion == 3:
-                         print("a")
+                         metodos.salir()
                      if opcion<1 or opcion>3:
-                        print("opcion incorrecta, intente de nuevo")
+                        print("Opción inválida")
 
 
     if bandera == True:
-        print('Usuario o contraseña incorrectas')
+        print('Usuario y/o contraseña errada')
         contador = contador + 1 
     
     print('\n ')
+    
+    
